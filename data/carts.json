@@ -1,0 +1,33 @@
+{
+  "Brian": [
+    {
+      "productId": "7",
+      "size": "M",
+      "quantity": 3
+    },
+    {
+      "productId": "7",
+      "size": "S",
+      "quantity": 1
+    }
+  ],
+  "Darry": [
+    {
+      "productId": "7",
+      "size": "M",
+      "quantity": 7
+    }
+  ],
+  "Alex": [
+    {
+      "productId": "7",
+      "size": "XL",
+      "quantity": 2
+    },
+    {
+      "productId": "7",
+      "size": "S",
+      "quantity": 3
+    }
+  ]
+}

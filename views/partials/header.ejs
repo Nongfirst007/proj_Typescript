@@ -47,8 +47,11 @@
               <span>❤</span>
 
               <!-- Cart -->
-              <a href="/cart">🛒</a>
-
+              <% if (!user) { %>
+                <a href="#" class="cart-icon">🛒</a>
+                <% } else { %>
+                  <a href="/cart">🛒</a>
+                  <% } %>
       </div>
     </div>
 
@@ -195,4 +198,14 @@
   <script src="/js/login.js"></script>
   <script>
     const USER_ROLE = "<%= user ? user.role : '' %>";
+  </script>
+  <script>
+    const cartBtn = document.querySelector(".cart-icon");
+
+    if (cartBtn) {
+      cartBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        openLoginModal();
+      });
+    }
   </script>

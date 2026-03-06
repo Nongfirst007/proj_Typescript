@@ -176,7 +176,7 @@ export const addProduct = (req: Request, res: Response): void => {
     return;
   }
 
-  const { name, price, category, brand } = req.body;
+  const { name, price, category, brand, description} = req.body;
 
   const sizes: string[] = req.body.sizes
     ? req.body.sizes.split(",").map((s: string) => s.trim()).filter(Boolean)
@@ -199,6 +199,8 @@ export const addProduct = (req: Request, res: Response): void => {
     sizes,
     images,
     department,
+    description,
+    isNew: true,
   };
 
   const products = getAllProducts();

@@ -12,6 +12,7 @@ export interface Product {
   sizes: string[];
   category?: string;
   isNew?: boolean;
+  description?: string;
 }
 
 /* ===== DATA PATH ===== */

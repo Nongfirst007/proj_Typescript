@@ -161,7 +161,8 @@
                                     <!-- DELETE FOR ADMIN -->
                                     <% if (user && user.role==="admin" ) { %>
                                         <form action="/products/admin/delete/<%= product.id %>" method="POST">
-                                            <button type="submit" class="admin-delete-btn" onclick="return confirm('Delete this product?')">
+                                            <button type="submit" class="admin-delete-btn"
+                                                onclick="return confirm('Delete this product?')">
                                                 Delete
                                             </button>
                                         </form>
@@ -198,7 +199,7 @@
 
                     <h2>Add New Product</h2>
 
-                    <form action="/products/admin/add" method="POST">
+                    <form action="/products/admin/add" method="POST" class="admin-form">
 
                         <input type="text" name="name" placeholder="Product Name" required>
 
@@ -212,9 +213,11 @@
 
                         <input type="text" name="sizes" placeholder="Sizes (S,M,L)">
 
-                        <input type="text" name="images" placeholder="Image URLs (comma separated)" required>
+                        <input type="text" name="images" placeholder="Image URLs (comma separated)" class="full">
 
-                        <button type="submit" class="admin-save-btn">Save Product</button>
+                        <textarea name="description" placeholder="Product Description" rows="4" class="full"></textarea>
+
+                        <button type="submit" class="admin-save-btn full">Save Product</button>
 
                     </form>
 
